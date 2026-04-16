@@ -1,16 +1,31 @@
-# React + Vite
+# AlgoViz — アルゴリズム可視化学習ツール
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+アルゴリズムの仕組みを「見て・実装して・テストする」3ステップで学べるWebアプリ。
 
-Currently, two official plugins are available:
+🔗 **[デモを見る](https://kazuma660.github.io/algorithm-visualizer/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 機能
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **📚 学習モード** — SVGアニメーションでアルゴリズムの動きを1ステップずつ確認。Pythonコードと連動してどの行が実行されているか表示
+- **✏️ 練習モード** — Pythonコードの穴埋めで実装を体験
+- **🏆 挑戦モード** — 4択クイズで理解度チェック
 
-## Expanding the ESLint configuration
+## 対応アルゴリズム
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+線形探索 / 二分探索 / バブルソート / 選択ソート / 挿入ソート
+
+## 技術スタック
+
+| 技術 | 用途 |
+|---|---|
+| React + Vite | UIコンポーネント管理、ビルド |
+| CSS Modules | コンポーネント単位のスタイル管理 |
+| SVG | アルゴリズムのアニメーション描画 |
+| localStorage | 学習進捗の保存 |
+| GitHub Pages | ホスティング |
+
+## 作った背景
+
+アルゴリズムを勉強していて「概念は分かるけど実装できない」「コードを見ても動きがイメージできない」という問題を感じた。見るだけでなく実際に手を動かして確認できるツールが欲しくて作った。
