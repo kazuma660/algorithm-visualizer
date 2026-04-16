@@ -1,0 +1,75 @@
+.page {
+  padding: 24px;
+}
+
+.header {
+  max-width: 800px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.backBtn {
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+
+.backBtn:hover {
+  background: var(--border);
+  color: var(--text-primary);
+}
+
+.pageTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.completedBanner {
+  max-width: 800px;
+  margin: 24px auto 0;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid var(--success);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.completedTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #86efac;
+  margin-bottom: 12px;
+}
+
+.challengeLink {
+  display: inline-block;
+  background: var(--warning);
+  color: var(--bg-primary);
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s;
+  margin-top: 8px;
+}
+
+.challengeLink:hover {
+  background: #d97706;
+  transform: scale(1.02);
+}

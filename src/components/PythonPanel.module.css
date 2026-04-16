@@ -1,0 +1,67 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.codeBlock {
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 12px;
+  overflow-x: auto;
+  font-family: 'SF Mono', 'Menlo', 'Monaco', monospace;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.lineWrapper {
+  display: flex;
+  align-items: stretch;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.lineWrapper.highlighted {
+  background: rgba(56, 189, 248, 0.15);
+  border-left: 3px solid var(--accent);
+}
+
+.lineWrapper:not(.highlighted) {
+  border-left: 3px solid transparent;
+}
+
+.lineNum {
+  color: var(--text-secondary);
+  width: 24px;
+  text-align: right;
+  padding-right: 12px;
+  user-select: none;
+  flex-shrink: 0;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.lineContent {
+  color: var(--text-primary);
+  white-space: pre;
+  flex: 1;
+}
+
+.highlighted .lineContent {
+  color: var(--accent);
+}
+
+.highlighted .lineNum {
+  color: var(--accent);
+}

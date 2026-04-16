@@ -1,0 +1,192 @@
+.page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── ヘッダー ── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.backBtn {
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+
+.backBtn:hover {
+  background: var(--border);
+  color: var(--text-primary);
+}
+
+.pageTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── アルゴリズム情報 ── */
+.algoInfo {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.algoDescription {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.complexityRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.complexityBadge {
+  font-size: 12px;
+  background: var(--bg-primary);
+  color: #7dd3fc;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-family: monospace;
+}
+
+/* ── 入力セクション ── */
+.inputSection {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  margin-bottom: 16px;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.inputLabel {
+  font-size: 13px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.inputField {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  padding: 7px 12px;
+  font-size: 14px;
+  font-family: monospace;
+  flex: 1;
+  min-width: 160px;
+  outline: none;
+}
+
+.inputField:focus {
+  border-color: var(--accent);
+}
+
+.applyBtn {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.applyBtn:hover {
+  background: var(--accent-hover);
+}
+
+.inputError {
+  color: var(--danger);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.inputHint {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* ── メインレイアウト ── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 16px;
+  align-items: start;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.rightColumn {
+  position: sticky;
+  top: 70px;
+}
+
+/* ── 完了ボタン ── */
+.completeSection {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.completeBtn {
+  background: var(--success);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.completeBtn:hover {
+  background: #22c55e;
+  transform: scale(1.02);
+}
+
+.completeDone {
+  color: var(--success);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .rightColumn {
+    position: static;
+  }
+}

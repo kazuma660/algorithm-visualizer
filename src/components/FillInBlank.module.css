@@ -1,0 +1,161 @@
+.container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.codeBlock {
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'SF Mono', 'Menlo', 'Monaco', monospace;
+  font-size: 14px;
+  line-height: 2;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.codeLine {
+  display: flex;
+  align-items: center;
+}
+
+.lineNum {
+  color: var(--text-secondary);
+  width: 24px;
+  text-align: right;
+  padding-right: 12px;
+  user-select: none;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.lineText {
+  color: var(--text-primary);
+  white-space: pre;
+}
+
+.blankInput {
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  color: var(--warning);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 1px 6px;
+  outline: none;
+  min-width: 80px;
+  transition: border-color 0.2s;
+  display: inline-block;
+}
+
+.blankInput:focus {
+  border-color: var(--warning);
+}
+
+.blankInput.correct {
+  border-color: var(--success);
+  background: rgba(74, 222, 128, 0.1);
+  color: #86efac;
+}
+
+.blankInput.wrong {
+  border-color: var(--danger);
+  background: rgba(248, 113, 113, 0.1);
+  color: #fca5a5;
+}
+
+.checkButton {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  margin-bottom: 16px;
+}
+
+.checkButton:hover {
+  background: var(--accent-hover);
+  transform: scale(1.02);
+}
+
+.result {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.resultPass {
+  background: rgba(74, 222, 128, 0.15);
+  border: 1px solid var(--success);
+  color: #86efac;
+}
+
+.resultFail {
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid var(--danger);
+  color: #fca5a5;
+}
+
+.hintList {
+  margin-top: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.hintItem {
+  padding: 6px 0;
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+}
+
+.hintBadge {
+  background: var(--danger);
+  color: white;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.hintText {
+  color: var(--text-secondary);
+}
+
+.successMessage {
+  text-align: center;
+  padding: 20px;
+  background: rgba(74, 222, 128, 0.1);
+  border-radius: 8px;
+  border: 1px solid var(--success);
+}
+
+.successIcon { font-size: 32px; margin-bottom: 8px; }
+
+.successText {
+  color: #86efac;
+  font-size: 18px;
+  font-weight: 700;
+}

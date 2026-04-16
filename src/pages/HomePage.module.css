@@ -1,0 +1,194 @@
+.page {
+  padding: 32px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.headerTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.headerSubtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ── カードグリッド ── */
+.pathContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent);
+}
+
+.card.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card.locked:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--border);
+}
+
+/* ── カードヘッダー ── */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardName {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lockIcon {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.categoryBadge {
+  background: var(--bg-card);
+  color: var(--accent);
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ── カード情報 ── */
+.cardInfo {
+  flex: 1;
+}
+
+.cardDescription {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.complexityRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.complexityItem {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.complexityValue {
+  color: var(--warning);
+  font-weight: 700;
+  font-family: monospace;
+}
+
+/* ── 進捗ドット ── */
+.progressDots {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.progressPill {
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 10px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  transition: background 0.2s, color 0.2s;
+}
+
+.progressPill.done {
+  background: var(--success);
+  color: var(--bg-primary);
+  font-weight: 600;
+}
+
+/* ── ボタン ── */
+.cardActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.actionBtn:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+}
+
+.btnLearn {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+.btnPractice {
+  background: #7c3aed;
+  color: white;
+}
+
+.btnChallenge {
+  background: var(--warning);
+  color: var(--bg-primary);
+}
+
+.prereqNote {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .pathContainer {
+    grid-template-columns: 1fr;
+  }
+}

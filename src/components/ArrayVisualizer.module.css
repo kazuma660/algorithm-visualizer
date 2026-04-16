@@ -1,0 +1,57 @@
+.container {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.svgWrapper {
+  width: 100%;
+  overflow: visible;
+}
+
+/* バーの状態色 */
+.bar            { transition: fill 0.3s ease, y 0.3s ease, height 0.3s ease; }
+.barDefault     { fill: #3b82f6; }
+.barComparing   { fill: var(--warning); }
+.barSwap        { fill: var(--danger); }
+.barSorted      { fill: var(--success); }
+.barFound       { fill: var(--success); }
+.barChecked     { fill: #64748b; }
+.barShift       { fill: #fb923c; }
+.barKey         { fill: #a78bfa; }
+.barLeft        { fill: var(--accent); }
+.barRight       { fill: #f472b6; }
+.barMid         { fill: var(--warning); }
+
+/* ラベル */
+.valueLabel {
+  font-size: 12px;
+  fill: var(--text-primary);
+  font-family: monospace;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.indexLabel {
+  font-size: 10px;
+  fill: var(--text-secondary);
+  font-family: monospace;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+/* ステップメッセージ */
+.message {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  font-size: 13px;
+  color: #cbd5e1;
+  min-height: 36px;
+  line-height: 1.5;
+}

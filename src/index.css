@@ -1,0 +1,77 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary:    #0f172a;
+  --bg-secondary:  #1e293b;
+  --bg-card:       #334155;
+  --text-primary:  #f1f5f9;
+  --text-secondary:#94a3b8;
+  --accent:        #38bdf8;
+  --accent-hover:  #7dd3fc;
+  --success:       #4ade80;
+  --danger:        #f87171;
+  --warning:       #fbbf24;
+  --border:        #475569;
+  --radius:        12px;
+  --shadow:        0 4px 20px rgba(0,0,0,0.3);
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4 { margin: 0; line-height: 1.2; }
+p  { margin: 0; }
+a  { color: inherit; text-decoration: none; }
+
+button, input { font-family: inherit; }
+code, pre     { font-family: 'SF Mono', 'Menlo', 'Monaco', monospace; }
+
+/* ── グローバルヘッダー ── */
+.app-header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-header-logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.app-header-sub {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.app-main {
+  flex: 1;
+}
