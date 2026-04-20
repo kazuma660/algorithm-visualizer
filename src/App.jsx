@@ -14,6 +14,21 @@ function Header() {
   )
 }
 
+function Footer() {
+  return (
+    <footer className="app-footer">
+      <a
+        href="https://forms.gle/ZBYFApBTJyE5HkLx6"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="app-footer-link"
+      >
+        💬 フィードバックを送る
+      </a>
+    </footer>
+  )
+}
+
 export default function App() {
   return (
     <HashRouter>
@@ -26,6 +41,7 @@ export default function App() {
           <Route path="/challenge/:algorithmId" element={<ChallengePage />} />
         </Routes>
       </main>
+      <Footer />
     </HashRouter>
   )
 }
